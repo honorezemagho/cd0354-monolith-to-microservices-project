@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - run: docker-compose build -f docker-compose-build.yaml build --parallel
-    - run: docker tag udagram-api-user honorezemagho/udagram-api-user:v1
-    - run: docker tag udagram-api-feed honorezemagho/udagram-api-feed:v1
-    - run: docker tag reverseproxy honorezemagho/reverseproxy:v1
-    - run: docker tag udagram-frontend honorezemagho/udagram-frontend:v1
-    - run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-    - run: docker push honorezemagho/udagram-api-user:v1
-    - run: docker push honorezemagho/udagram-api-feed:v1
-    - run: docker push honorezemagho/udagram-reverseproxy:v1
-    - run: docker push honorezemagho/udagram-frontend:v1
+      - uses: actions/checkout@v3
+      - run: docker-compose -f docker-compose-build.yaml build --parallel
+      - run: docker tag reverseproxy pasciano007/reverseproxy:v1
+      - run: docker tag udagram-api-user pasciano007/udagram-api-user:v1
+      - run: docker tag udagram-api-feed pasciano007/udagram-api-feed:v1
+      - run: docker tag udagram-frontend:local pasciano007/udagram-frontend:v2
+      - run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - run: docker push pasciano007/reverseproxy:v1
+      - run: docker push pasciano007/udagram-api-user:v1
+      - run: docker push pasciano007/udagram-api-feed:v1
+      - run: docker push pasciano007/udagram-frontend:v2
