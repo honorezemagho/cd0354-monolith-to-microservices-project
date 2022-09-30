@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-feed
+  labels:
+    app: backend-feed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-feed
+  template:
+    metadata:
+      labels:
+        app: backend-feed
+    spec:
+      containers:
+      - name: feed
+        image: honorezemagho/udagram-api-feed:v1
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: env-udagram-configmap
+          - secretRef:
+              name: env-udagram-pg
