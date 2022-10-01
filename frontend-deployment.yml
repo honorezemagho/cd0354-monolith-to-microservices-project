@@ -19,3 +19,4 @@ spec:
         image: honorezemagho/udagram-frontend:v1
         ports:
         - containerPort: 80
+    
