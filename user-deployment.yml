@@ -24,6 +24,10 @@ spec:
               name: env-udagram-configmap
           - secretRef:
               name: env-udagram-pg
-      volumes:
+        volumeMounts:
+          - mountPath: "/root/.aws"
+            name: udagram-aws-creds
+      volumes: 
         - name: udagram-aws-creds
-          configMap: udagram-aws-creds
+          configMap: 
+            - name: udagram-aws-creds
