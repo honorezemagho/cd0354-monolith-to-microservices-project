@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - name: feed
+      - name: backend-feed
         image: honorezemagho/udagram-api-feed:v1
         ports:
         - containerPort: 8080

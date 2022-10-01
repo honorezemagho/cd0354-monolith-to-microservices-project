@@ -4,7 +4,7 @@ metadata:
   name: env-udagram-configmap
 data:
   # property-like keys; each key maps to a simple value
-  POSTGRES_HOST: momo-to-micro.c8bnqmfespmd.us-east-1.rds.amazonaws.com    
+  POSTGRES_HOST: mono-to-micro.c5f50idqbxuc.us-east-2.rds.amazonaws.com  
   POSTGRES_DB: udagram  
   AWS_BUCKET: udacity-mono-to-micro
   AWS_REGION: us-east-1
