@@ -26,4 +26,4 @@ spec:
               name: env-udagram-pg
       volumes:
         - name: udagram-aws-creds
-          configMapRef: udagram-aws-creds
+          configMap: udagram-aws-creds
