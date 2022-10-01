@@ -30,4 +30,4 @@ spec:
       volumes: 
         - name: udagram-aws-creds
           configMap: 
-            - name: udagram-aws-creds
+            name: udagram-aws-creds
