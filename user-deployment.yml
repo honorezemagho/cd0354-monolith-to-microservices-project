@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: honorezemagho/udagram-api-user:v1
+        image: honorezemagho/udagram-api-user:v2
         resources:
           requests:
             memory: "64Mi"
