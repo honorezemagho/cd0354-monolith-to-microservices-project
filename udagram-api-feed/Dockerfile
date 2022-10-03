@@ -9,4 +9,4 @@ RUN npm ci
 # Regroupement des sources de l'application
 COPY . .
 EXPOSE 8080
-CMD [ "npm", "run", "prod" ]
+CMD [ "npm", "run", "dev" ]
