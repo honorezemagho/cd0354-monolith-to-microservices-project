@@ -17,6 +17,13 @@ spec:
       containers:
       - name: frontend
         image: honorezemagho/udagram-frontend:v1
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "400m"
         ports:
         - containerPort: 80
     
